@@ -7,17 +7,33 @@
     <link rel="stylesheet" href="./css/all.min.css">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <title>technostuff</title>
-
-
 </head>
 <body>
-    hello world
+
+
+        <div class="row">
+            <div class="col-12">
+                <?php include("./pagina-s/navbar.php"); ?>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <?php include("./pagina-s/content.php"); ?>
+            </div>
+        </div>
+
+        <div class="row fixed-bottom">
+            <div class="col-12 footer">
+                <?php include("./pagina-s/footer.php"); ?>
+            </div>
+        </div>
 
 
 
 
 
-    
+
     <script src="./js/jquery.min.js"></script>
     <script src="./js/popper.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
