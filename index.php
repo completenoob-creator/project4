@@ -6,6 +6,7 @@
     <link rel="shortcut icon" href="./icon/logofavicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/all.min.css">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
     <title>technostuff</title>
 </head>
 <body>
