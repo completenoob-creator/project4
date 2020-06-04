@@ -15,9 +15,8 @@
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="./index.php?content=producten1">producten1</a>
-            <a class="dropdown-item" href="./index.php?content=producten">producten2</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">producten3</a>
+            <a class="dropdown-item" href="./index.php?content=producten2">producten2</a>
+            <a class="dropdown-item" href="./index.php?content=producten3">producten3</a>
           </div>
         </li>
       </ul>
@@ -38,7 +37,7 @@
       <div class="col-1">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
           <li class="nav-item active">
-            <a class="nav-link" href="#"><img src="./img/wagen.PNG" height="50px" alt=""> <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="./index.php?content=winkelwagen"><img src="./img/wagen.PNG" height="50px" alt=""> <span class="sr-only">(current)</span></a>
           </li>
       </ul>
     </div>
