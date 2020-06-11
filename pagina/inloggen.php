@@ -1,4 +1,4 @@
-<form class="col-6 " method="POST">
+<form class="col-6" method="POST" action="./index.php?content=login_script">
   <div class="form-group">
     <label for="exampleInputEmail1">Email address</label>
     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -14,5 +14,6 @@
   </div>
   <button type="submit" class="btn btn-primary" onclick="o()">login</button>
 </form>
+
 
 <button type="submit" class="btn btn-primary" onclick="registreren()">account maaken</button>
