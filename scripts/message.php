@@ -58,9 +58,14 @@ header("Refresh: 3; url=./index.php?content=home");
     break;
     case 'geen-match-wachtwoord':
         echo '<div class="alert alert-danger w-50 mx-auto mt-5" text-center role="alert">
-        U heeft een van beide wachtwoord velden niet ingevuld probeer het opnieuw
+        U heeft niet hetzelfde wachtwoord ingevoerd probeer het opnieuw.
     </div>';
     header("Refresh: 3; url=./index.php?content=activate&id=$id&pwh=$pwh");
+    case 'al-geactiveerd':
+        echo '<div class="alert alert-danger w-50 mx-auto mt-5" text-center role="alert">
+         dit account is al geactiveerd, log in.
+    </div>';
+    header("Refresh: 3; url=./index.php?content=inloggen");
     break;
 }
 
