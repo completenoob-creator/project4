@@ -9,9 +9,15 @@ switch($_GET["alert"]){
             </div>';
         header("Refresh: 3; url=./index.php?content=inloggen");
     break;
-    case 'login-succes"' :
+    case 'login-succes' :
         echo '<div class="alert alert-primary w-50 mx-auto mt-5" role="alert">
-                login formulier is leeg probeer het opnieuw
+               u bent ingelogt
+            </div>';
+        header("Refresh: 3; url=./index.php?content=home");
+    break;
+    case 'leeg' :
+        echo '<div class="alert alert-primary w-50 mx-auto mt-5" role="alert">
+              u bent vergeten iets intevullen
             </div>';
         header("Refresh: 3; url=./index.php?content=home");
     break;
