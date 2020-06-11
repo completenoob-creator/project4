@@ -9,9 +9,42 @@ if(empty($_POST["email"])
     header("Location: ./index.php?content=message&alert=leeg");
 }else {
     //maak contact met de mysql server
-    include("./pagina's/connect_db.php");
-    include("./pagina's/functions.php");
+    include("./scripts/connect_db.php");
+    include("./scripts/functions.php");
 
-    $email=sanitize($_POST["email"]);
+    $email = sanitize($_POST["email"]);
+    $username = sanitize($_POST["username"]);
+    $straatnaam = sanitize($_POST["straatnaam"]);
+    $huisnummer = sanitize($_POST["huisnummer"]);
+    $postcode = sanitize($_POST["postcode"]);
+    $woonplaats = sanitize($_POST["woonplaats"]);
+
+    $sql = "SELECT * FROM `register` WHERE `email` = '$email' AND WHERE `username` = '$username'";
+
+    $result = mysqli_query($conn, $sql);
+
+    if (mysqli_num_rows($result)){
+        header("Location: ./index.php?content=message&alert=bestaat-all");
+    }else{
+        "INSERT INTO `inlog` 
+                        (`id`, 
+                        `username`, 
+                        `email`, 
+                        `wachtwoord`, 
+                        `straatnaam`, 
+                        `huisnummer`, 
+                        `postcode`, 
+                        `woonplaats`) 
+                 VALUES (NULL, 
+                        'hoi', 
+                        'hoi', 
+                        'hoi', 
+                        'hoi', 
+                        'hoi', 
+                        'hoi', 
+                        'hoi');";
+    }
+
+    header("Location: ./index.php?content=message&alert=register-success");
     }
 ?>
