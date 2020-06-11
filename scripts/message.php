@@ -14,9 +14,21 @@ switch($_GET["alert"]){
     case 'email-onbekend' :
         echo '<div class="alert alert-primary w-50 mx-auto mt-5" role="alert">
                  dit email is onbekend in de database registreer u
+                 </div>';
+                 header("Refresh: 3; url=./index.php?content=registreren");
+             break;
+    case 'login-succes' :
+        echo '<div class="alert alert-primary w-50 mx-auto mt-5" role="alert">
+               u bent ingelogt
             </div>';
-        header("Refresh: 3; url=./index.php?content=registreren");
+        header("Refresh: 3; url=./index.php?content=home");
     break;
+    case 'leeg' :
+        echo '<div class="alert alert-primary w-50 mx-auto mt-5" role="alert">
+              u bent vergeten iets intevullen
+              </div>';
+              header("Refresh: 3; url=./index.php?content=registreren");
+          break;
     case 'niet-geactiveerd':
         echo '<div class="alert alert-danger w-50 mx-auto mt-5" text-center role="alert">
         U acount is nog niet geactiveerd. check uw email ' .$email. ' voor het klikken op de activatielink

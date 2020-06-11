@@ -1,4 +1,4 @@
-<form class="col-4 center">
+<form class="col-4 center" method="post" action="./index.php?content=registreren_script">
   <div class="form-row">
     <div class="form-group col-md-6">
       <label for="inputEmail4">Email</label>
