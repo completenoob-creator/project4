@@ -27,8 +27,11 @@ if(empty($_POST["email"])
     if (mysqli_num_rows($result)){
         header("Location: ./index.php?content=message&alert=bestaat-all");
     }else{
-        $sql = "INSERT INTO `inlog` (`id`, `username`, `email`, `wachtwoord`, `straatnaam`, `huisnummer`, `postcode`, `woonplaats`) VALUES (NULL, 'hoi', 'hoi', 'hoi', 'hoi', 'hoi', 'hoi', 'hoi');";
-        
+        $array = mk_password_hash_from_microtime();
+
+        $sql = "INSERT INTO `inlog` (`id`, `username`, `email`, `wachtwoord`, `straatnaam`, `huisnummer`, `postcode`, `woonplaats`) VALUES (NULL, '$username', '$email', '{$array["password_hash"]}', '$straatnaam', '$huisnummer', '$postcode', '$woonplaats');";
+       
+        $result = mysqli_query($conn, $sql);
      header("Location: ./index.php?content=message&alert=register-success");                  
     }
 
