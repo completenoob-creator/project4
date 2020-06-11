@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <title>technostuff</title>
 </head>
-<body>
+<body class="overflow">
 
 
         <div class="row">
@@ -38,5 +38,6 @@
     <script src="./js/jquery.min.js"></script>
     <script src="./js/popper.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/javascript.js"></script>
 </body>
 </html>

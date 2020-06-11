@@ -1,7 +1,17 @@
 /* home page css */
 
+.overflow{
+    overflow: visible;
+}
+
 .home-opbouw{
     color: red;
     padding-top: 25px;
     padding-left: 30px;
 }
+
+.center{
+    margin: auto;
+    margin-top: 10%;
+}
+
