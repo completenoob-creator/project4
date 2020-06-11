@@ -19,32 +19,19 @@ if(empty($_POST["email"])
     $postcode = sanitize($_POST["postcode"]);
     $woonplaats = sanitize($_POST["woonplaats"]);
 
-    $sql = "SELECT * FROM `register` WHERE `email` = '$email' AND WHERE `username` = '$username'";
+    $sql = "SELECT * FROM `inlog` WHERE `username`='$username' AND `email`='$email'";
+    
 
     $result = mysqli_query($conn, $sql);
 
     if (mysqli_num_rows($result)){
         header("Location: ./index.php?content=message&alert=bestaat-all");
     }else{
-        "INSERT INTO `inlog` 
-                        (`id`, 
-                        `username`, 
-                        `email`, 
-                        `wachtwoord`, 
-                        `straatnaam`, 
-                        `huisnummer`, 
-                        `postcode`, 
-                        `woonplaats`) 
-                 VALUES (NULL, 
-                        'hoi', 
-                        'hoi', 
-                        'hoi', 
-                        'hoi', 
-                        'hoi', 
-                        'hoi', 
-                        'hoi');";
+        $sql = "INSERT INTO `inlog` (`id`, `username`, `email`, `wachtwoord`, `straatnaam`, `huisnummer`, `postcode`, `woonplaats`) VALUES (NULL, 'hoi', 'hoi', 'hoi', 'hoi', 'hoi', 'hoi', 'hoi');";
+        
+     header("Location: ./index.php?content=message&alert=register-success");                  
     }
 
-    header("Location: ./index.php?content=message&alert=register-success");
+    
     }
 ?>
