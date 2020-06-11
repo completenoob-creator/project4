@@ -5,9 +5,7 @@
             } 
             elseif(file_exists('scripts/' . $_GET['content'] . '.php')){
                 include 'scripts/' . $_GET['content'] . '.php';
-            } else {
-            include 'pagina/home.php';
-        }
+            } 
         }
            
     ?>
