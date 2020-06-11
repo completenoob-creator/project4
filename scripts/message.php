@@ -44,6 +44,24 @@ header("Refresh: 3; url=./index.php?content=home");
 de email of username is al in gebruik </div>';
 header("Refresh: 3; url=./index.php?content=home");
     break;
+    case 'hacker-alert':
+        echo '<div class="alert alert-danger w-50 mx-auto mt-5" text-center role="alert">
+        U heeft geen rechten u wordt doorgestuurd naar home
+    </div>';
+    header("Refresh: 3; url=./index.php?content=home");
+    break;
+    case 'geen-wachtwoord':
+        echo '<div class="alert alert-danger w-50 mx-auto mt-5" text-center role="alert">
+        U heeft een van beide wachtwoord velden niet ingevuld probeer het opnieuw
+    </div>';
+    header("Refresh: 3; url=./index.php?content=activate&id=$id&pwh=$pwh");
+    break;
+    case 'geen-match-wachtwoord':
+        echo '<div class="alert alert-danger w-50 mx-auto mt-5" text-center role="alert">
+        U heeft een van beide wachtwoord velden niet ingevuld probeer het opnieuw
+    </div>';
+    header("Refresh: 3; url=./index.php?content=activate&id=$id&pwh=$pwh");
+    break;
 }
 
 

@@ -28,10 +28,11 @@ if(empty($_POST["email"])
         header("Location: ./index.php?content=message&alert=bestaat-all");
     }else{
         $password = "geheim";
-    $password_hash = password_hash($password, PASSWORD_BCRYPT);
+        $password_hash = password_hash($password, PASSWORD_BCRYPT);
 
         $sql = "INSERT INTO `inlog` (`id`, `username`, `email`, `wachtwoord`, `straatnaam`, `huisnummer`, `postcode`, `woonplaats`) VALUES (NULL, '$username', '$email', '$password_hash', '$straatnaam', '$huisnummer', '$postcode', '$woonplaats');";
-        
+       
+        $result = mysqli_query($conn, $sql);
      header("Location: ./index.php?content=message&alert=register-success");                  
     }
 
