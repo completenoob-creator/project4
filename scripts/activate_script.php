@@ -29,6 +29,14 @@ if(empty($_POST["password"]) || empty($_POST["passwordcheck"])){
                 SET `wachtwoord` = '$password_hash',
                 `geactiveerd` = 1
                 WHERE `id` = $id AND `wachtwoord` = '$pwh'";
+
+                if(mysqli_query($conn,$sql)){
+                    header("Location: ./index.php?content=message&alert=update-succes");
+                }else{
+                    header("Location: ./index.php?content=message&alert=update-faal");
+                }
+            }else{
+                header("Location: ./index.php?content=message&alert=no-match-pwh");
             }
 
         }
