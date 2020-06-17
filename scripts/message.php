@@ -73,8 +73,8 @@ header("Refresh: 3; url=./index.php?content=home");
         echo '<div class="alert alert-danger w-50 mx-auto mt-5" text-center role="alert">
          het updaten van u wachtwoord is geslaagd u wordt doorgestuurd naar de inlogpagina.
     </div>';
-    break;
     header("Refresh: 3; url=./index.php?content=inloggen");
+    break;
     case 'update-faal':
         echo '<div class="alert alert-danger w-50 mx-auto mt-5" role="alert">
         Het registratieproces is niet gelukt kies een niew wachtwoord
@@ -84,6 +84,12 @@ header("Refresh: 3; url=./index.php?content=home");
     case 'no-match-pwh':
         echo '<div class="alert alert-danger w-50 mx-auto mt-5" text-center role="alert">
         U activatielink gegevens zijn niet correct, registreer opnieuw
+    </div>';
+    header("Refresh: 3; url=./index.php?content=registreer");
+    break;
+    case 'register-error':
+        echo '<div class="alert alert-danger w-50 mx-auto mt-5" text-center role="alert">
+        u betn
     </div>';
     header("Refresh: 3; url=./index.php?content=registreer");
     break;
