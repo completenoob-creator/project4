@@ -29,11 +29,12 @@ function sanitize($raw_data){
  };
 
  function component($productname , $productprice,$productimage){
-    $element='<div class="col-4">
+    $element="
+    <div class=\"col-4\">
     <form>
-        <div class="card-shadow" style="width: 18rem;" >
+        <div class=\"card-shadow" style="width: 18rem;\">
             <div>
-                <img src=\"$productimage\" height="10px" alt="" class="img-fluid card-img-top">
+                <img src=\"$productimage\" height=\"10px" alt="" class="img-fluid card-img-top\">
             </div>
         
             <div class="card-body">
