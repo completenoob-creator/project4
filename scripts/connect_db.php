@@ -31,7 +31,7 @@ $this->password = $password;
 
 
 
-$this->conn 
+$this->conn = mysqli_connect()
 }
 
 
