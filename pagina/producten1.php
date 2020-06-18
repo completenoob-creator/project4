@@ -1,6 +1,6 @@
 <?php
 require_once("./scripts/functions.php");
-echo"hoi";
+
 ?>
 
 
