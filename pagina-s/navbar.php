@@ -27,13 +27,21 @@
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form>
     </div>
-    <div class="col-1">
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-        <li class="nav-item">
+      <div class="col-1">
+      <?php
+      if (isset($_SESSION["id"])) {
+        echo '<li class="nav-item">
           <a class="nav-link" href="./index.php?content=inloggen">inloggen</a>
-        </li>
+        </li>';
+        }else{
+          echo '<li class="nav-item '; echo '">
+          <a class="nav-link" href="./index.php?content=inloggen">Login</a>
+        </li>';
+        }
+      ?>
+    </div>
       </ul>
-      </div>
       <div class="col-1">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
           <li class="nav-item active">
