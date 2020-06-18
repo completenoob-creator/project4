@@ -11,7 +11,7 @@ $result = mysqli_query($conn, $sql);
 
 $row = mysqli_fetch_array($result) ;
 
-if($row['email'] == $email  && password_verify($password, $row["password"])){
+if($row['email'] == $email  && password_verify($password, $row["wachtwoord"])){
     header("Location: ./index.php?content=message&alert=login-succesvol");
 
 if(empty($email) && empty($password)){

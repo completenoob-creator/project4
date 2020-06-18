@@ -30,7 +30,7 @@ if(empty($_POST["email"])
         $password = "$2y$10$6bqIkEyrBNRXe7FUj3ClTcOSpLpUscTCGlAhreQ2UvYvJWU2kJgFJG";
         $password_hash = password_hash($password, PASSWORD_BCRYPT);
 
-        $sql = "INSERT INTO `inlog` (`id`, `username`, `email`, `wachtwoord`, `geactiveerd`, `straatnaam`, `huisnummer`, `postcode`, `woonplaats`) VALUES (NULL, '$username', '$email', '$password_hash', '0', '$straatnaam', '$huisnummer', '$postcode', '$woonplaats');";
+        $sql = "INSERT INTO `inlog` (`id`, `username`, `email`, `wachtwoord`, `geactiveerd`, `userrole`, `straatnaam`, `huisnummer`, `postcode`, `woonplaats`) VALUES (NULL, '$username', '$email', '$password_hash', '0', 'customer', '$straatnaam', '$huisnummer', '$postcode', '$woonplaats');";
        
      
      if (mysqli_query($conn, $sql)){
