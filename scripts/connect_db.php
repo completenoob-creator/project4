@@ -31,7 +31,34 @@ $this->password = $password;
 
 
 
-$this->conn = mysqli_connect()
+$this->conn = mysqli_connect($servername,$username,$password);
+
+
+if(!$this->conn){
+    die("connection faild:" . mysqli_connect_error());
+}
+
+$sql ="CREATE DATABASE IF NOT EXISTS $dbname";
+
+if(mysqli_query($this->conn,$sql)){
+    $this->conn = mysqli_connect($servername,$username,$password,$dbname);
+
+    $sql = "CREATE TABLE IF NOT EXISTS $tbname
+    (id INT (11) NOT NULL AUTO_INCREMENT PRIMARY KEY
+    product_name VARCHAR (25) NOT NULL,
+    product_price FLOAT NOT NULL,
+    total_price FLOAT NOT NULL,
+    product_image VARCHAR (100) NOT NULL);";
+
+    if(!mysqli_query($this->conn,$sql)){
+        echo"creating table:" . mysqli_error($this->conn);
+    }
+}else{
+    return false;
+}
+
+
+
 }
 
 
