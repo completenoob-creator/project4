@@ -89,7 +89,13 @@ header("Refresh: 3; url=./index.php?content=home");
     break;
     case 'register-error':
         echo '<div class="alert alert-danger w-50 mx-auto mt-5" text-center role="alert">
-        u betn
+        registratie mislukt
+    </div>';
+    header("Refresh: 3; url=./index.php?content=registreer");
+    break;
+    case 'login-succesvol':
+        echo '<div class="alert alert-danger w-50 mx-auto mt-5" text-center role="alert">
+        u bent ingelogt
     </div>';
     header("Refresh: 3; url=./index.php?content=registreren");
     break;

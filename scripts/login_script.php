@@ -5,6 +5,14 @@ include("./scripts/functions.php");
 $email = sanitize($_POST["email"]);
 $password = sanitize($_POST["password"]);
 
+$sql= "SELECT * FROM `inlog` WHERE `email` = '$email'";
+
+$result = mysqli_query($conn, $sql);
+
+$row = mysqli_fetch_array($result) ;
+
+if($row['email'] == $email  && password_verify($password, $row["password"])){
+    header("Location: ./index.php?content=message&alert=login-succesvol");
 
 if(empty($email) && empty($password)){
         //check of login velden zijn ingevuld
@@ -32,6 +40,6 @@ if(empty($email) && empty($password)){
     }
         }
 }
-
+}
 
 ?>
