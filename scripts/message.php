@@ -97,7 +97,7 @@ header("Refresh: 3; url=./index.php?content=home");
         echo '<div class="alert alert-danger w-50 mx-auto mt-5" text-center role="alert">
         u bent ingelogt
     </div>';
-    header("Refresh: 3; url=./index.php?content=registreer");
+    header("Refresh: 3; url=./index.php?content=home");
     break;
     
 }
