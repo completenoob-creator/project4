@@ -39,7 +39,7 @@ if(empty($email) && empty($password)){
             header("Location: ./index.php?content=message&alert=no-pw-match&email=$email");
     }else{
         $_SESSION["id"] = $row["id"];
-        $_SESSION["rollen"] = $row["rollen"];
+        $_SESSION["userrole"] = $row["userrole"];
     }
         }
 }

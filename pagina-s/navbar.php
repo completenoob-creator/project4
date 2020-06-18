@@ -28,6 +28,17 @@
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form>
+      <?php 
+          if (isset($_SESSION["id"])) {
+            switch($_SESSION["userrole"]){
+              case 'admin' :
+                echo '<ul><li class="nav-item '; echo '">
+                <a class="nav-link" href="./index.php?content=admin">admin</a>
+              </li></ul>';
+              break;
+            }
+          }
+      ?>
     </div>
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <div class="col-1">

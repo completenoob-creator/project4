@@ -6,7 +6,12 @@
             } 
             elseif(file_exists('scripts/' . $_GET['content'] . '.php')){
                 include 'scripts/' . $_GET['content'] . '.php';
-            } 
+            }elseif(file_exists('pagina-a/' . $_GET['content'] . '.php')){
+                include 'pagina-a/' . $_GET['content'] . '.php';
+            }
+            elseif(file_exists('pagina-r/' . $_GET['content'] . '.php')){
+                include 'pagina-r/' . $_GET['content'] . '.php';
+            }
         }
            
     ?>
