@@ -28,15 +28,18 @@ if(empty($email) && empty($password)){
             header("Location: ./index.php?content=message&alert=email-onbekend");
         }
         else{
-            $record = mysqli_fetch_assoc($result);
+            $row = mysqli_fetch_assoc($result);
             
-            if(!$record["geactiveerd"]){
+            if(!$row["geactiveerd"]){
                 //niet geactiveerd
                 header("Location: ./index.php?content=message&alert=niet-geactiveerd&email=$email");
         }
-        elseif(!password_verify($password,$record["wachtwoord"])){
+        elseif(!password_verify($password,$row["wachtwoord"])){
             //geen match wachtwoord
             header("Location: ./index.php?content=message&alert=no-pw-match&email=$email");
+    }else{
+        $_SESSION["id"] = $row["id"];
+        $_SESSION["rollen"] = $row["rollen"];
     }
         }
 }

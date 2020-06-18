@@ -98,6 +98,11 @@ header("Refresh: 3; url=./index.php?content=home");
         u bent ingelogt
     </div>';
     header("Refresh: 3; url=./index.php?content=home");
+    case 'logout-succes':
+        echo '<div class="alert alert-danger w-50 mx-auto mt-5" text-center role="alert">
+         U bent met succes uitgelogd.
+    </div>';
+    header("Refresh: 3; url=./index.php?content=home");
     break;
     
 }

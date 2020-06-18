@@ -1,3 +1,5 @@
+<?php session_start(); session_gc(); ?>
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="./index.php?content=home"><img src="./icon/logo.png" alt=""></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -32,7 +34,7 @@
       <?php
       if (isset($_SESSION["id"])) {
         echo '<li class="nav-item">
-          <a class="nav-link" href="./index.php?content=inloggen">inloggen</a>
+          <a class="nav-link" href="./index.php?content=uitloggen">uitloggen</a>
         </li>';
         }else{
           echo '<li class="nav-item '; echo '">
