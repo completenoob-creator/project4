@@ -8,5 +8,6 @@ require_once("./scripts/functions.php");
    <?php 
    component();
    ?> 
+        
     </div>
 </div>

@@ -55,7 +55,6 @@ function sanitize($raw_data){
     </form>
  </div>';
  echo $element;
- 
 
  }
  
