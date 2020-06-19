@@ -2,7 +2,6 @@
 require_once("./scripts/connect_db.php");
 require_once("./scripts/functions.php");
 
-$database = new createdb("technostuff","productdb");
 ?>
 
 
