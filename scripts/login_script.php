@@ -28,6 +28,11 @@ $email = sanitize($_POST["email"]);
                                         //geen match wachtwoord
                                         header("Location: ./index.php?content=message&alert=no-pw-match&email=$email");
                                     }
+                                    else{
+                                        header("Location: ./index.php?content=message&alert=login-succes");
+                                        $_SESSION["id"] = $record["id"];
+                                        $_SESSION["userrole"] = $record["userrole"];
+                                    }
                         }
 
     }
