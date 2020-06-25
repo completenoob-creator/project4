@@ -25,6 +25,7 @@ if(empty($_POST["password"]) || empty($_POST["passwordcheck"])){
             if (!strcmp($record["wachtwoord"],$pwh)){
                 $password_hash = password_hash($password,PASSWORD_BCRYPT);
 
+                
                 $sql="UPDATE `inlog`
                 SET `wachtwoord` = '$password_hash',
                 `geactiveerd` = 1
