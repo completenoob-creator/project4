@@ -3,10 +3,10 @@ require_once("./pagina/producten1.php");
 require_once("./scripts/product_db.php");
 
 ?>
-<div class="row">
+
 <?php
 function component($product_name,$product_price,$total_price,$productimg,$product_id){
-    $element="<div class='col-6'>
+    $element="<div class='col-md-3 col-sm-6 my-3 my-md-0'>
     <form action='./index.php?content=producten1' method='POST'>
         <div class='card-shadow' style='width: 18rem;' >
             <div>
@@ -37,4 +37,3 @@ function component($product_name,$product_price,$total_price,$productimg,$produc
  }
  
  ?>
-</div>

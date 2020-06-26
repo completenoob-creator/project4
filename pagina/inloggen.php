@@ -1,4 +1,6 @@
-<form class="col-6 center" method="POST" action="./index.php?content=login_script">
+
+<div class="col-6 center ">
+<form  method="POST">
   <div class="form-group">
     <label for="exampleInputEmail1">Email address</label>
     <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -12,8 +14,8 @@
     <input type="checkbox" class="form-check-input" id="exampleCheck1">
     <label class="form-check-label" for="exampleCheck1">Check me out</label>
   </div>
-  <button type="submit" class="btn btn-primary">login</button>
+  <button type="submit" class="btn btn-primary" formaction="./index.php?content=login_script">login</button>
+  <button type="submit" class="btn btn-primary margin" formaction="./index.php?content=registreren">account maaken</button>
 </form>
+</div>
 
-
-<button type="submit" class="btn btn-primary" onclick="registreren()">account maaken</button>
