@@ -16,10 +16,10 @@ function component($product_name,$product_price,$total_price,$productimg,$id){
             <div class='card-body'>
                 <h5 class='card-title'>$product_name</h5>
                 <h6>
-                <img src='./img/wagen.png' height='10px' alt=''>
-                <img src='./img/wagen.png' height='10px' alt=''>
-                <img src='./img/wagen.png' height='10px' alt=''>
-                <img src='./img/wagen.png' height='10px' alt=''>
+                <img src='./img/star.png' height='14px' alt=''>
+                <img src='./img/star.png' height='14px' alt=''>
+                <img src='./img/star.png' height='14px' alt=''>
+                <img src='./img/star.png' height='14px' alt=''>
                 </h6>
                 <p class='card-text'>
                     some quick example text to build on the card
