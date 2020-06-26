@@ -3,7 +3,7 @@ require_once("./pagina/producten1.php");
 require_once("./scripts/product_db.php");
 
 ?>
-<div class="row">
+
 <?php
 function component($product_name,$product_price,$total_price,$productimg,$product_id){
     $element="<div class='col-6'>
@@ -37,4 +37,3 @@ function component($product_name,$product_price,$total_price,$productimg,$produc
  }
  
  ?>
-</div>
