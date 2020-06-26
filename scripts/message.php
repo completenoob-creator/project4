@@ -105,6 +105,12 @@ header("Refresh: 3; url=./index.php?content=home");
     </div>';
     header("Refresh: 3; url=./index.php?content=home");
     break;
+    case 'product_already_in_cart':
+        echo '<div class="alert alert-danger w-50 mx-auto mt-5" text-center role="alert">
+         het product staat al u in u winkelwagen
+    </div>';
+    header("Refresh: 3; url=./index.php?content=producten1");
+    break;
     
 }
 
