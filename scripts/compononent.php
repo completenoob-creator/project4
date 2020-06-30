@@ -5,12 +5,12 @@ require_once("./scripts/product_db.php");
 ?>
 
 <?php
-function component($product_name,$product_price,$total_price,$product_img,$id){
+function component($product_name,$product_price,$total_price,$productimg,$id){
     $element="<div class='col-md-3 col-sm-6 my-3 my-md-0'>
     <form action='./index.php?content=producten1' method='POST'>
         <div class='card-shadow' style='width: 18rem;' >
             <div>
-                <img src='$product_img' height='10px' alt='' class='img-fluid card-img-top'>
+                <img src='$productimg' height='10px' alt='' class='img-fluid card-img-top'>
             </div>
         
             <div class='card-body'>
