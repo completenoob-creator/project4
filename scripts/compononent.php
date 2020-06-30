@@ -22,7 +22,7 @@ function component($product_name,$product_price,$total_price,$productimg,$id){
                 <img src='./img/star.png' height='14px' alt=''>
                 </h6>
                 <p class='card-text'>
-                    some quick example text to build on the card
+                    dit is een laptop
                 </p>
                 <span class='price'> $$product_price</span>
                 <span class='price'> inclusief btw $$total_price</span>

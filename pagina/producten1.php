@@ -28,12 +28,12 @@ if (isset($_POST['remove'])){
 
 $_SESSION['cart'] = json_encode($cart);
 // TOEGEVOEGD OF VERWIJDERD UIT CART BERICHT
-// $cart = json_decode($_SESSION['cart'], true);
+//  $cart = json_decode($_SESSION['cart'], true);
 
-// $prdSql = 'SELECT * FROM productdb WHERE id IN ('.implode(',', array_keys($cart)).')';
-// foreach($DBresult as $prdId => $amount) {
+//  $prdSql = 'SELECT * FROM productdb WHERE id IN ('.implode(',', array_keys($cart)).')';
+//  foreach($DBresult as $prdId => $amount) {
     
-// }
+//  }
 
 $result = getData();
 while($row = mysqli_fetch_assoc($result)){;
