@@ -58,7 +58,7 @@
       <div class="col-1">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
           <li class="nav-item active">
-            <a class="nav-link" href="./index.php?content=winkelwagen"><img src="./img/wagen.PNG" height="50px" alt=""> <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="./index.php?content=cart"><img src="./img/wagen.PNG" height="50px" alt=""> <span class="sr-only">(current)</span></a>
           </li>
       </ul>
     </div>

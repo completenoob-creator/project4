@@ -1,31 +1,10 @@
 <?php
 require_once("./scripts/product_db.php");
 require_once("./scripts/compononent.php");
+require_once("./scripts/cart.php");
 
-if(isset($_SESSION['cart'])){
-    $cart = json_decode($_SESSION['cart'], true);
-} else {
-    $cart = array();
-}
-   
-if (isset($_POST['add'])){    
-    $prdId = $_POST['product_id']; 
-    if (isset($cart[$prdId])) {
-        $cart[$prdId] = $cart[$prdId] + 1;
-    } else {
-        $cart[$prdId] = 1;
-    }
-}
 
-if (isset($_POST['remove'])){    
-    $prdId = $_POST['product_id']; 
-    if (isset($cart[$prdId]) && $cart[$prdId] > 1) {
-        $cart[$prdId] = $cart[$prdId] - 1;
-    } else {
-        unset($cart[$prdId]);
-    }
-}
-
+<<<<<<< HEAD
 $_SESSION['cart'] = json_encode($cart);
 // TOEGEVOEGD OF VERWIJDERD UIT CART BERICHT
 //  $cart = json_decode($_SESSION['cart'], true);
@@ -34,14 +13,16 @@ $_SESSION['cart'] = json_encode($cart);
 //  foreach($DBresult as $prdId => $amount) {
     
 //  }
+=======
+>>>>>>> 7453b3e1a81114b6090f020ff21d0657b018b96a
 
 $result = getData();
-while($row = mysqli_fetch_assoc($result)){;
+while($row = mysqli_fetch_assoc($result)){
     component(
+        $row['product_img'],
         $row['product_name'], 
         $row['product_price'], 
         $row['total_price'],
-        $row['product_img'],
         $row['id']);
 }
 ?>
