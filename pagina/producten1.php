@@ -4,7 +4,6 @@ require_once("./scripts/compononent.php");
 require_once("./scripts/cart.php");
 
 
-<<<<<<< HEAD
 $_SESSION['cart'] = json_encode($cart);
 // TOEGEVOEGD OF VERWIJDERD UIT CART BERICHT
 //  $cart = json_decode($_SESSION['cart'], true);
@@ -13,8 +12,6 @@ $_SESSION['cart'] = json_encode($cart);
 //  foreach($DBresult as $prdId => $amount) {
     
 //  }
-=======
->>>>>>> 7453b3e1a81114b6090f020ff21d0657b018b96a
 
 $result = getData();
 while($row = mysqli_fetch_assoc($result)){

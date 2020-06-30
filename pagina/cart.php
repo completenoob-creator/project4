@@ -29,7 +29,7 @@ function get_cart() {
           <th scope="col">aantal</th>
           <th scope="col">prijs</th>
           <th scope="col">totaal prijs</th>
-          <th scope="col"></th>
+          <th scope="col"><img src="./img/plus.png" height="14px"></th>
         </tr>
       </thead>';
         foreach($cart as $prdId => $amount) {
