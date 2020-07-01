@@ -44,7 +44,6 @@ function get_cart() {
             $cartStr .= '<td>'.$prdTotal.'</td>';
             $cartStr .= '</tr>';
         }
-        
         $cartStr .= '</table>';
         $cartStr .= '</div>';
 
