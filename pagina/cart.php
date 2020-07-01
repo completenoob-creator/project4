@@ -25,20 +25,16 @@ function get_cart() {
         $cartStr .= '<table class="table table-sm">';
         $cartStr .= '<thead>
         <tr>
-          <th scope="col">img</th>
           <th scope="col">naam-product</th>
           <th scope="col">aantal</th>
           <th scope="col">prijs</th>
           <th scope="col">totaal prijs</th>
-          <th scope="col"><img src="./img/plus.png" height="14px"></th>
-          <th scope="col"><img src="./img/delete.png" height="14px"></th>
         </tr>
       </thead>';
         foreach($cart as $prdId => $amount) {
             $prdTotal = $amount * $dbArr[$prdId]['product_price'];
             $cartTotal += $prdTotal;
             $cartStr .= '<tr>';
-            $cartStr .= '<td>'.$dbArr[$prdId]['product_img'].'</td>';
             $cartStr .= '<td>'.$dbArr[$prdId]['product_name'].'</td>';
             $cartStr .= '<td>'.$amount.'</td>';
             $cartStr .= '<td>'.$dbArr[$prdId]['product_price'].'</td>';
