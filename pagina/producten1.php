@@ -9,7 +9,7 @@ $_SESSION['cart'] = json_encode($cart);
 //  $cart = json_decode($_SESSION['cart'], true);
 
 //  $prdSql = 'SELECT * FROM productdb WHERE id IN ('.implode(',', array_keys($cart)).')';
-//  foreach($DBresult as $prdId => $amount) {
+//  foreach($DBresult as $prdId => $amont) {
     
 //  }
 
