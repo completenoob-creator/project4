@@ -109,7 +109,34 @@ header("Refresh: 3; url=./index.php?content=home");
         echo '<div class="alert alert-danger w-50 mx-auto mt-5" text-center role="alert">
          het product staat al u in u winkelwagen
     </div>';
-    header("Refresh: 3; url=./index.php?content=producten1");
+    case 'nog-niet-begonnen':
+        echo '<div class="alert alert-danger w-50 mx-auto mt-5" text-center role="alert">
+          sorry we zijn hier nog niet aan toe gekomen
+    </div>';
+    header("Refresh: 3; url=./index.php?content=cart");
+    case 'nog-een-toegevoegd':
+        echo '<div class="alert alert-danger w-50 mx-auto mt-5" text-center role="alert">
+          product toegevoegd
+    </div>';
+    header("Refresh: 3; url=./index.php?content=cart");
+    break;
+    case 'product-toegevoegd':
+        echo '<div class="alert alert-danger w-50 mx-auto mt-5" text-center role="alert">
+         u heeft er 1 product bij gedaan
+    </div>';
+    header("Refresh: 3; url=./index.php?content=cart");
+    break;
+    case 'min-een':
+        echo '<div class="alert alert-danger w-50 mx-auto mt-5" text-center role="alert">
+         Er wordt een product afgehaald
+    </div>';
+    header("Refresh: 3; url=./index.php?content=cart");
+    break;
+    case 'product-verwijderd':
+        echo '<div class="alert alert-danger w-50 mx-auto mt-5" text-center role="alert">
+         Dit product is verwijderd uit u winkelwagen of het bestond nog niet
+    </div>';
+    header("Refresh: 3; url=./index.php?content=cart");
     break;
     
 }

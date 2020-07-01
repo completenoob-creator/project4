@@ -13,12 +13,11 @@
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
-            producten
+            producten/informatie
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="./index.php?content=producten1">producten1</a>
-            <a class="dropdown-item" href="./index.php?content=producten2">producten2</a>
-            <a class="dropdown-item" href="./index.php?content=producten3">producten3</a>
+            <a class="dropdown-item" href="./index.php?content=producten1">producten</a>
+            <a class="dropdown-item" href="./index.php?content=informatie">informatie</a>
           </div>
         </li>
       </ul>
@@ -29,6 +28,7 @@
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form>
       <?php 
+      //kijkt of er een id is en zoja wat voor userrole deze persoon heeft 
           if (isset($_SESSION["id"])) {
             switch($_SESSION["userrole"]){
               case 'admin' :

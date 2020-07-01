@@ -4,14 +4,15 @@ function get_cart() {
     require_once("./scripts/product_db.php");
     require_once("./scripts/cart.php");
     if (isset($cart) && !empty($cart)) {
+        //include database
         require_once("./scripts/connect_db.php");
-
+        //maakt variabele van select statement
         $prdSql = 'SELECT * FROM productdb WHERE id IN ('.implode(',', array_keys($cart)).')';
-        
+        //kijkt of er resultaat is
         $result = mysqli_query($conn, $prdSql);
-
+        //maakt een array aan
         $dbArr = array();
-
+        //loopt door product id
         while($row = mysqli_fetch_assoc($result)){
             $id = $row['id'];
             unset($row['id']);
@@ -42,6 +43,14 @@ function get_cart() {
             $cartStr .= '<td>'.$amount.'</td>';
             $cartStr .= '<td>'.$dbArr[$prdId]['product_price'].'</td>';
             $cartStr .= '<td>'.$prdTotal.'</td>';
+            // $cartStr .= '<td>
+            // <form action="index.php?content=cart" method="POST">
+            //     <button type="submit" name="add" class="btn btn-warning my-3">add to cart 
+            //         <img src="./img/wagen.png" height="10px">
+            //     </button>
+            //     <input type="hidden" name="product_id" value="$id">
+            // </form>
+            // </td>';
             $cartStr .= '</tr>';
         }
         $cartStr .= '</table>';
@@ -50,10 +59,13 @@ function get_cart() {
         return $cartStr;
     } else{
         return 'geen producten in winkelwagen.';
+
     }
 }
 ?>
 
 <div class="container">
     <?=get_cart();?>
+    <a href="./index.php?content=producten1" class="btn btn-secondary btn-lg btn-block" role="button" aria-pressed="true">verder gaan met winkelen</a>
+    <a href="./index.php?content=message&alert=nog-niet-begonnen" class="btn btn-success btn-lg btn-block" role="button" aria-pressed="true">afronden</a>
 </div>
