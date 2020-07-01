@@ -16,10 +16,10 @@ $_SESSION['cart'] = json_encode($cart);
 $result = getData();
 while($row = mysqli_fetch_assoc($result)){
     component(
-        $row['product_img'],
         $row['product_name'], 
         $row['product_price'], 
         $row['total_price'],
+        $row['product_img'],
         $row['id']);
 }
 ?>
