@@ -1,4 +1,5 @@
 <?php
+//stuurt een melding als hij/zij hier niet hoort
 if(!(isset($_GET["content"]) && isset($_GET["id"]) && isset($_GET["pwh"]))){
     header("Location: ./index.php?content=message&alert=hacker-alert");
 }

@@ -1,5 +1,5 @@
-<?php // als er niets in het laatje zit dan ...
-
+<?php 
+// als er niets in het laatje zit dan ...
 if(empty($_POST["email"]) 
 && empty($_POST["username"]) 
 && empty($_POST["straatnaam"]) 
@@ -11,14 +11,14 @@ if(empty($_POST["email"])
     //maak contact met de mysql server
     include("./scripts/connect_db.php");
     include("./scripts/functions.php");
-
+    //maakt de post arrays schoon
     $email = sanitize($_POST["email"]);
     $username = sanitize($_POST["username"]);
     $straatnaam = sanitize($_POST["straatnaam"]);
     $huisnummer = sanitize($_POST["huisnummer"]);
     $postcode = sanitize($_POST["postcode"]);
     $woonplaats = sanitize($_POST["woonplaats"]);
-
+    //selecteert username en email uit de database
     $sql = "SELECT * FROM `inlog` WHERE `username`='$username' AND `email`='$email'";
     
 
@@ -27,9 +27,10 @@ if(empty($_POST["email"])
     if (mysqli_num_rows($result)){
         header("Location: ./index.php?content=message&alert=bestaat-all");
     }else{
+      //password hash
         $password = "$2y$10$6bqIkEyrBNRXe7FUj3ClTcOSpLpUscTCGlAhreQ2UvYvJWU2kJgFJG";
         $password_hash = password_hash($password, PASSWORD_BCRYPT);
-
+        //insert into inloggen
         $sql = "INSERT INTO `inlog` (`id`, `username`, `email`, `wachtwoord`, `geactiveerd`, `userrole`, `straatnaam`, `huisnummer`, `postcode`, `woonplaats`) VALUES (NULL, '$username', '$email', '$password_hash', '0', 'customer', '$straatnaam', '$huisnummer', '$postcode', '$woonplaats');";
        
      

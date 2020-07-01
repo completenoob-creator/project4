@@ -1,4 +1,5 @@
 <?php 
+//voor connectie met de database 
 define("SERVERNAME", "localhost");
 define("USERNAME", "technostuff");
 define("PASSWORD", "3kzsOMgMFNYLk04s");

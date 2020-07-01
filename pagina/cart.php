@@ -18,9 +18,9 @@ function get_cart() {
             unset($row['id']);
             $dbArr[$id] = $row;
         }
-        
+        //het start getal van cart total
         $cartTotal = 0;
-        
+        //zorgt voor producten overzicht
         $cartStr = '<div id="cart-table">';
         $cartStr .= '<table class="table table-sm">';
         $cartStr .= '<thead>

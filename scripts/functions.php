@@ -1,4 +1,5 @@
 <?php
+//zorgt dat er geen script in gevoerd kan worden
 function sanitize($raw_data){
     global $conn;
     $data = htmlspecialchars($raw_data);
@@ -7,7 +8,7 @@ function sanitize($raw_data){
     return $data;
  }
 
-
+// voor het password aanmaken van het password
  function mk_password_hash_from_microtime(){
     $mut= microtime();
 

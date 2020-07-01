@@ -114,6 +114,7 @@ header("Refresh: 3; url=./index.php?content=home");
           sorry we zijn hier nog niet aan toe gekomen
     </div>';
     header("Refresh: 3; url=./index.php?content=cart");
+    break;
     case 'nog-een-toegevoegd':
         echo '<div class="alert alert-danger w-50 mx-auto mt-5" text-center role="alert">
           product toegevoegd

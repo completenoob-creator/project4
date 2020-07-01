@@ -9,6 +9,7 @@ $email = sanitize($_POST["email"]);
         //check of login velden zijn ingevuld
         header("Location: ./index.php?content=message&alert=login-form-empty");
     }else{
+                        //haalt email uit de database
                         $sql="SELECT * FROM `inlog` WHERE `email` = '$email'";
 
                         $result= mysqli_query($conn,$sql);
@@ -19,7 +20,6 @@ $email = sanitize($_POST["email"]);
                         }else{
                                     $record = mysqli_fetch_assoc($result);
 
-                                    //var_dump($record["geactiveerd"]);
 
                                     if(!$record["geactiveerd"]){
                                         //niet geactiveerd
