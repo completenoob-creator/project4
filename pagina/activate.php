@@ -4,9 +4,9 @@ if(!(isset($_GET["content"]) && isset($_GET["id"]) && isset($_GET["pwh"]))){
 }
 ?>
 
-<form action="./index.php?content=activate_script" method="POST">
+<form action="./index.php?content=activate_script" method="POST" class="center">
     <div class="row">
-        <div class="col-6">
+        <div class="col-12">
             <div class="form-group">
                 <label for="exampleInputPassword1">Wachtwoord</label>
                 <input type="password" name="password" class="form-control" id="exampleInputPassword1">
